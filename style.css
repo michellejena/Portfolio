@@ -1,0 +1,66 @@
+/* Basic page styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 40px;
+    background-color:white ;
+}
+
+/* Navigation styling */
+.navbar {
+    display: flex;
+    justify-content: space-between; /* Pushes items to opposite ends */
+    align-items: center;
+    margin-bottom: 80px;
+}
+
+.logo {
+    font-weight: bold;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+}
+
+.nav-links a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: #333;
+}
+
+/* Flexbox container for the main section */
+.container {
+    display: flex;
+    align-items: center; 
+}
+
+/* Image styling with space around it */
+.profile-image img {
+    width: 200px;
+    height: 200px;
+    margin-right: 60px; /* Space between image and text */
+    border: 1px solid #ddd;
+}
+
+/* Text styling */
+.content h1 {
+    font-size: 2.8rem;
+    margin-bottom: 15px;
+}
+
+/* Different color for the name */
+.highlight {
+    color: #6c5ce7; /* A nice purple/blue color */
+}
+
+/* Button styling */
+.connect-btn {
+    padding: 12px 24px;
+    background-color: #2d3436;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.connect-btn:hover {
+    background-color: #636e72;
+}
