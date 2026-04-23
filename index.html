@@ -5,113 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Michelle Portfolio</title>
 
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: Arial, sans-serif;
-            background: #111;
-            color: white;
-            line-height: 1.6;
-        }
-
-        nav {
-            display: flex;
-            justify-content: space-evenly;
-            align-items: center;
-            background: #1e1e1e;
-            padding: 20px 40px;
-        }
-
-        nav ul {
-            display: flex;
-            list-style: none;
-        }
-
-        nav ul li {
-            margin-left: 20px;
-        }
-
-        nav a {
-            color: #00aaff;
-            text-decoration: none;
-        }
-
-        .hero {
-            display: flex;
-            justify-content: space-evenly;
-            align-items: center;
-            padding: 60px 40px;
-        }
-
-        .hero-text {
-            width: 50%;
-        }
-
-        .hero-image img {
-            width: 250px;
-            border-radius: 50%;
-            
-            border: 3px solid #00aaff;
-        }
-
-        section {
-            padding: 50px 40px;
-        }
-
-        h2 {
-            margin-bottom: 20px;
-            color: #00aaff;
-        }
-
-        .skills-box {
-            display: flex;
-            gap: 20px;
-            flex-wrap: wrap;
-        }
-
-        .skills-box div {
-            background: #1e1e1e;
-            padding: 15px 20px;
-            border-radius: 8px;
-        }
-
-        .project-card {
-            background: #1e1e1e;
-            padding: 20px;
-            margin-bottom: 20px;
-            border-radius: 10px;
-        }
-
-        @media (max-width: 768px) {
-            .hero {
-                flex-direction: column;
-                text-align: center;
-            }
-
-            .hero-text {
-                width: 100%;
-                margin-bottom: 20px; 
-            }
-
-            nav {
-                flex-direction: column;
-            }
-
-            nav ul {
-                margin-top: 10px;
-            }
-        }
-    </style>
+    <!-- Link to CSS -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <section>
 
-    <nav>
-        <h2>Michelle Portfolio</h2>
+    <div class="navigation">
+        <label class="logo">Michelle Portfolio</label>
         <ul>
             <li><a href="#home">Home</a></li>
             <li><a href="#about">About</a></li>
@@ -119,29 +20,31 @@
             <li><a href="#projects">Projects</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
-    </nav>
+    </div>
+    </section>
 
     <section id="home" class="hero">
         <div class="hero-text">
-            <img src="jena.jpg" alt="Profile Picture"width ="400";height ="350">
-        </div>
-
-        <div class="hero-image">
             <h1>Hi, I'm Michelle Jena</h1>
             <h2>Software Engineering Student</h2>
             <p>
-                software developer focused on building reliabe ,maintainable web applications with modern tech stacks
-                <code></code>
+                Software developer focused on building reliable and maintainable web applications.
             </p>
-            <button class="connect-btn">lets connect</button>
-            
+
+            <!-- Working Button -->
+            <button onclick="location.href='#contact'">Let's Connect</button>
+        </div>
+
+        <div class="hero-image">
+            <img src="jena.jpg" alt="Profile Picture">
         </div>
     </section>
 
     <section id="about">
         <h2>About Me</h2>
         <p>
-     I am a software developer based in harare ,passionate about building products easy to use .I work mainly with JavaScript ; Python and Django and l enjoy the whole process from planning to deployment .I have also worked with Econet before and other schools .
+            I am a software developer based in Harare, passionate about building easy-to-use products.
+            I work with JavaScript, Python, and Django and enjoy the full development process.
         </p>
     </section>
 
@@ -151,12 +54,15 @@
             <div>HTML</div>
             <div>CSS</div>
             <div>Python</div>
+            <div>JavaScript</div>
+            <div>Django</div>
             <div>Product Design</div>
         </div>
     </section>
 
     <section id="projects">
         <h2>Projects</h2>
+
         <div class="project-card">
             <h3>Student Grade Checker</h3>
             <p>Python project for checking and calculating student marks.</p>
@@ -170,25 +76,18 @@
 
     <section id="contact">
         <h2>Contact</h2>
+
+        <!-- Email -->
         <p>Email: michellejena75@gmail.com</p>
-        <p>Phone: +263 776560564</p>
+
+        <!-- Facebook (replace link with yours) -->
+        <p>Facebook: <a href="https://facebook.com/" target="_blank">Visit my Facebook</a></p>
+
     </section>
 
+    <footer>
+        <p>© 2026 Michelle Jena</p>
+    </footer>
+
 </body>
-</html>
-    
-    
- 
-
-
-
-
-</div>
-
-
-
-
-
-</section>
-</body>
-</html>
+</html> 

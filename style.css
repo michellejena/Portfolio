@@ -1,66 +1,131 @@
-/* Basic page styling */
+
 body {
     font-family: Arial, sans-serif;
-    margin: 40px;
-    background-color:white ;
+    background: white;
+    color:black;
 }
 
-/* Navigation styling */
-.navbar {
+/* NAV */
+.navigation {
     display: flex;
-    justify-content: space-between; /* Pushes items to opposite ends */
+    justify-content: space-between;
     align-items: center;
-    margin-bottom: 80px;
+    background: #0596eb;
+    padding: 20px 60px;
 }
 
-.logo {
-    font-weight: bold;
-    font-size: 1.2rem;
-    text-transform: uppercase;
+.navigation ul li{
+    display: inline;
+    margin: 0 40px;
 }
 
-.nav-links a {
-    margin-left: 20px;
+.navigation ul li a {
+    color: black;
     text-decoration: none;
-    color: #333;
+    
 }
 
-/* Flexbox container for the main section */
-.container {
-    display: flex;
-    align-items: center; 
-}
 
-/* Image styling with space around it */
-.profile-image img {
-    width: 200px;
-    height: 200px;
-    margin-right: 60px; /* Space between image and text */
-    border: 1px solid #ddd;
-}
-
-/* Text styling */
-.content h1 {
-    font-size: 2.8rem;
-    margin-bottom: 15px;
-}
-
-/* Different color for the name */
-.highlight {
-    color: #6c5ce7; /* A nice purple/blue color */
-}
-
-/* Button styling */
-.connect-btn {
-    padding: 12px 24px;
-    background-color: #2d3436;
+nav a:hover {
     color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-weight: bold;
 }
 
-.connect-btn:hover {
-    background-color: #636e72;
+/* HERO */
+.hero {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 60px 40px;
+}
+
+.hero-text {
+    width: 50%;
+}
+
+.hero-image img {
+    width: 250px;
+    border-radius: 50%;
+    border: 3px solid #00aaff;
+}
+
+/* BUTTON */
+button {
+    background: grey;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    margin-top: 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+/* Hover effect */
+button:hover {
+    background: #00aaff;
+    transform: scale(1.05);
+}
+
+/* SECTIONS */
+section {
+    padding: 50px 40px;
+}
+
+h2 {
+    margin-bottom: 20px;
+    color: #00aaff;
+}
+
+/* SKILLS */
+.skills-box {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.skills-box div {
+    background: #1e1e1e;
+    padding: 15px 20px;
+    border-radius: 8px;
+}
+
+/* PROJECTS */
+.project-card {
+    background: #1e1e1e;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.project-card:hover {
+    transform: scale(1.03);
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #1e1e1e;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-text {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    nav {
+        flex-direction: column;
+    }
+
+    nav ul {
+        margin-top: 10px;
+    }
 }
