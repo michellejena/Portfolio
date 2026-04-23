@@ -45,7 +45,7 @@ nav a:hover {
 .hero-image img {
     width: 250px;
     border-radius: 50%;
-    border: 3px solid #00aaff;
+    border: 3px solid blue;
 }
 
 /* BUTTON */
@@ -62,7 +62,7 @@ button {
 
 /* Hover effect */
 button:hover {
-    background: #00aaff;
+    background: blue;
     transform: scale(1.05);
 }
 
@@ -73,7 +73,7 @@ section {
 
 h2 {
     margin-bottom: 20px;
-    color: #00aaff;
+    color: white;
 }
 
 /* SKILLS */
@@ -84,14 +84,14 @@ h2 {
 }
 
 .skills-box div {
-    background: #1e1e1e;
+    background: blue;
     padding: 15px 20px;
     border-radius: 8px;
 }
 
 /* PROJECTS */
 .project-card {
-    background: #1e1e1e;
+    background: blue;
     padding: 20px;
     margin-bottom: 20px;
     border-radius: 10px;
@@ -106,7 +106,7 @@ h2 {
 footer {
     text-align: center;
     padding: 20px;
-    background: #1e1e1e;
+    background: blue;
 }
 
 /* RESPONSIVE */
