@@ -12,8 +12,15 @@
     <section>
 
     <div class="navigation">
-        <label class="logo">Michelle Portfolio</label>
-        <ul>
+        <div class="nav-brand">
+            <span class="logo">Michelle Portfolio</span>
+            <button class="nav-toggle-btn" aria-label="Toggle navigation" aria-controls="nav-menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+        <ul id="nav-menu" class="nav-menu">
             <li><a href="#home">Home</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#skills">Skills</a></li>
@@ -89,5 +96,25 @@
         <p>© 2026 Michelle Jena</p>
     </footer>
 
+    <script>
+        const navToggleBtn = document.querySelector('.nav-toggle-btn');
+        const navMenu = document.querySelector('.nav-menu');
+
+        navToggleBtn.addEventListener('click', () => {
+            const isOpen = navMenu.classList.toggle('open');
+            navToggleBtn.classList.toggle('open', isOpen);
+            navToggleBtn.setAttribute('aria-expanded', isOpen);
+        });
+
+        document.querySelectorAll('.nav-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                if (navMenu.classList.contains('open')) {
+                    navMenu.classList.remove('open');
+                    navToggleBtn.classList.remove('open');
+                    navToggleBtn.setAttribute('aria-expanded', 'false');
+                }
+            });
+        });
+    </script>
 </body>
 </html> 

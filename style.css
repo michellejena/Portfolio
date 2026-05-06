@@ -21,32 +21,78 @@ body {
     align-items: center;
     background: var(--brand-blue);
     padding: 20px 60px;
+    position: relative;
+}
+
+.nav-brand {
+    display: flex;
+    align-items: center;
+    gap: 20px;
 }
 
 .navigation .logo {
-    color: var(--text-light);
+    color: var(--text-main);
     font-weight: bold;
     letter-spacing: 0.05em;
 }
 
-.navigation ul {
+.nav-toggle-btn {
+    display: none;
+    width: 40px;
+    height: 40px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    padding: 0;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-toggle-btn span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background: var(--text-main);
+    border-radius: 3px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.nav-toggle-btn span + span {
+    margin-top: 6px;
+}
+
+.nav-toggle-btn.open span:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);
+}
+
+.nav-toggle-btn.open span:nth-child(2) {
+    opacity: 0;
+}
+
+.nav-toggle-btn.open span:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg);
+}
+
+.nav-menu {
     list-style: none;
     padding: 0;
     margin: 0;
+    display: flex;
+    gap: 24px;
 }
 
-.navigation ul li {
+.nav-menu li {
     display: inline;
-    margin: 0 24px;
 }
 
-.navigation ul li a {
-    color: var(--text-light);
+.nav-menu li a {
+    color: var(--text-main);
     text-decoration: none;
     font-weight: 500;
+    transition: color 0.3s ease;
 }
 
-.navigation ul li a:hover {
+.nav-menu li a:hover {
     color: #d6ecff;
 }
 
@@ -88,7 +134,7 @@ body {
 /* BUTTON */
 button {
     background: var(--brand-blue);
-    color: var(--text-light);
+    color: var(--text-main);
     padding: 12px 26px;
     border: none;
     margin-top: 15px;
@@ -129,7 +175,7 @@ h2 {
 
 .skills-box div {
     background: var(--brand-blue);
-    color: var(--text-light);
+    color: var(--text-main);
     padding: 15px 20px;
     border-radius: 8px;
     min-width: 120px;
@@ -161,11 +207,48 @@ footer {
     text-align: center;
     padding: 20px;
     background: var(--brand-blue);
-    color: var(--text-light);
+    color: var(--text-main);
 }
 
 /* RESPONSIVE */
 @media (max-width: 768px) {
+    .navigation {
+        padding: 20px 20px;
+        justify-content: space-between;
+    }
+
+    .nav-toggle-btn {
+        display: flex;
+    }
+
+    .nav-menu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: var(--brand-blue);
+        flex-direction: column;
+        gap: 0;
+        padding: 20px;
+        display: none;
+        z-index: 99;
+    }
+
+    .nav-menu.open {
+        display: flex;
+    }
+
+    .nav-menu li {
+        display: block;
+        margin: 12px 0;
+    }
+
+    .nav-menu li a {
+        display: block;
+        width: 100%;
+        padding: 10px 0;
+    }
+
     .hero {
         flex-direction: column;
         text-align: center;
@@ -176,13 +259,11 @@ footer {
         margin-bottom: 20px;
     }
 
-    .navigation {
-        flex-direction: column;
-        align-items: flex-start;
+    .hero-text h1 {
+        font-size: 2rem;
     }
 
-    .navigation ul li {
-        display: block;
-        margin: 12px 0;
+    .hero-text h2 {
+        font-size: 1.2rem;
     }
 }
